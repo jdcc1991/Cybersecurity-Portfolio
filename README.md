@@ -39,8 +39,8 @@ Cybersecurity-Portfolio/
 
 | Nº | Laboratorio | Estado |
 |----|-------------|--------|
-| 01 | Kali Lab Setup | 🚧 En progreso |
-| 02 | Reconocimiento con Nmap | ⏳ Pendiente |
+| 01 | Kali Lab Setup | ✅ |
+| 02 | Análisis de Logs en Windows y Linux | ✅ |
 | 03 | OSINT con theHarvester | ⏳ Pendiente |
 | 04 | Análisis de Metadatos | ⏳ Pendiente |
 | 05 | Wireshark Fundamentals | ⏳ Pendiente |
