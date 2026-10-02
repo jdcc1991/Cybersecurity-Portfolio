@@ -41,7 +41,7 @@ Cybersecurity-Portfolio/
 |----|-------------|--------|
 | 01 | Kali Lab Setup | ✅ |
 | 02 | Análisis de Logs en Windows y Linux | ✅ |
-| 03 | Análisis de Tráfico de Red con Wireshark| ⏳ Pendiente |
+| 03 | Análisis de Tráfico de Red con Wireshark| ✅ |
 | 04 | Reconocimiento y Evaluación de Vulnerabilidades | ⏳ Pendiente |
 | 05 | Monitoreo Avanzado de Windows con Sysmon | ⏳ Pendiente |
 | 06 | Implementación de un SIEM con Wazuh | ⏳ Pendiente |

@@ -1,0 +1,97 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Network Topology" id="emxIitCGvn99cdx4geDU">
+    <mxGraphModel dx="2353" dy="940" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-36" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0F4C5C;fontColor=#FFFFFF;strokeColor=#0B3944;strokeWidth=2;fontSize=30;fontStyle=1;align=center;verticalAlign=middle;" value="Network Topology&#xa;Wireshark Traffic Analysis Lab" vertex="1">
+          <mxGeometry height="85" width="800" x="485" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-37" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontSize=18;fontStyle=1;align=center;verticalAlign=middle;" value="8.8.8.8&#xa;ICMP Target&#xa;&#xa;Echo Request / Reply" vertex="1">
+          <mxGeometry height="125" width="300" x="175" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-38" parent="1" style="shape=cloud;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;strokeWidth=2;fontSize=24;fontStyle=1;" value="Internet" vertex="1">
+          <mxGeometry height="125" width="300" x="735" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-39" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontSize=17;fontStyle=1;align=center;verticalAlign=middle;" value="example.com&#xa;HTTPS / TLS&#xa;172.66.147.243&#xa;&#xa;TCP/443 · SNI example.com" vertex="1">
+          <mxGeometry height="125" width="300" x="1295" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-40" edge="1" parent="1" source="_AK7RgDJek_SfL2NfB3t-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D32F2F;strokeWidth=3;endArrow=classic;fontSize=16;fontStyle=1;" target="_AK7RgDJek_SfL2NfB3t-37" value="ICMP">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-41" edge="1" parent="1" source="_AK7RgDJek_SfL2NfB3t-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1565C0;strokeWidth=3;endArrow=classic;fontSize=16;fontStyle=1;" target="_AK7RgDJek_SfL2NfB3t-39" value="HTTPS / TLS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-42" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF6FB;strokeColor=#1976D2;strokeWidth=2;fontSize=24;fontStyle=1;align=left;verticalAlign=top;spacingTop=18;spacingLeft=20;" value="VMware Workstation Lab&#xa;Virtual Network: 192.168.14.0/24" vertex="1">
+          <mxGeometry height="565" width="1510" x="130" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-43" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#616161;strokeWidth=2;fontSize=18;fontStyle=1;align=center;verticalAlign=middle;" value="VMware Network Service&#xa;192.168.14.2&#xa;DNS observed · UDP/53" vertex="1">
+          <mxGeometry height="95" width="360" x="705" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-44" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#7B1FA2;strokeWidth=2;fontSize=17;align=left;verticalAlign=top;spacingTop=16;spacingLeft=18;" value="Kali Linux&#xa;&#xa;192.168.14.128/24&#xa;Interface: eth0&#xa;&#xa;Analysis&#xa;• Wireshark&#xa;• tshark&#xa;&#xa;Services / Tools&#xa;• Nmap&#xa;• Python HTTP Server&#xa;• OpenSSH Server&#xa;• Samba Server&#xa;• dig · curl · ping" vertex="1">
+          <mxGeometry height="340" width="330" x="345" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-45" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;strokeWidth=2;fontSize=18;align=left;verticalAlign=top;spacingTop=18;spacingLeft=20;" value="Windows 10&#xa;&#xa;192.168.14.129/24&#xa;&#xa;Lab roles&#xa;• HTTP Client&#xa;• SSH Client&#xa;• SMB Client&#xa;• Port Scan Target" vertex="1">
+          <mxGeometry height="270" width="300" x="1095" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-46" parent="1" style="rounded=1;dashed=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1976D2;strokeWidth=2;fontSize=15;align=left;verticalAlign=top;spacingTop=12;spacingLeft=14;" value="DNS Analysis&#xa;&#xa;192.168.14.128 → 192.168.14.2&#xa;Query A: example.com&#xa;UDP/53&#xa;&#xa;Response → 172.66.147.243" vertex="1">
+          <mxGeometry height="211.5" width="165" x="155" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-47" parent="1" style="rounded=1;dashed=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1976D2;strokeWidth=2;fontSize=15;align=center;verticalAlign=middle;" value="ARP Analysis&#xa;&#xa;192.168.14.128 ↔ 192.168.14.2&#xa;&#xa;ARP Request / Reply&#xa;IP ↔ MAC Resolution" vertex="1">
+          <mxGeometry height="145" width="165" x="155" y="736" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-48" parent="1" style="rounded=1;dashed=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1976D2;strokeWidth=2;fontSize=14;align=left;verticalAlign=top;spacingTop=12;spacingLeft=14;" value="Traffic Summary&#xa;&#xa;ICMP — Echo Req/Reply&#xa;ARP — IP ↔ MAC&#xa;DNS — UDP/53&#xa;HTTP — TCP/80&#xa;HTTPS/TLS — TCP/443&#xa;SSH — TCP/22&#xa;SMB2 — TCP/445&#xa;SYN Scan — Multiple ports" vertex="1">
+          <mxGeometry height="270" width="185" x="1420" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-49" edge="1" parent="1" source="_AK7RgDJek_SfL2NfB3t-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#37474F;strokeWidth=2;endArrow=none;" target="_AK7RgDJek_SfL2NfB3t-43" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-50" edge="1" parent="1" source="_AK7RgDJek_SfL2NfB3t-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#37474F;strokeWidth=2;endArrow=none;" target="_AK7RgDJek_SfL2NfB3t-44" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-51" edge="1" parent="1" source="_AK7RgDJek_SfL2NfB3t-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#37474F;strokeWidth=2;endArrow=none;" target="_AK7RgDJek_SfL2NfB3t-45" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-52" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#F57C00;strokeWidth=2;fontSize=15;fontStyle=1;align=center;" value="HTTP · TCP/80&#xa;Windows 10 → Kali&#xa;GET / → 200 OK" vertex="1">
+          <mxGeometry height="58" width="245" x="760" y="545" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-53" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontSize=15;fontStyle=1;align=center;" value="SSH · TCP/22&#xa;Windows 10 → Kali&#xa;Encrypted session" vertex="1">
+          <mxGeometry height="58" width="245" x="760" y="615" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-54" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#7B1FA2;strokeWidth=2;fontSize=15;fontStyle=1;align=center;" value="SMB2 · TCP/445&#xa;Windows 10 → Kali&#xa;SOC-Lab / evidencia-soc.txt" vertex="1">
+          <mxGeometry height="58" width="245" x="760" y="685" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-55" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#D32F2F;strokeWidth=2;fontSize=15;fontStyle=1;align=center;" value="TCP SYN Port Scan&#xa;Kali → Windows 10&#xa;Top 100 TCP ports" vertex="1">
+          <mxGeometry height="58" width="245" x="760" y="755" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-56" edge="1" parent="1" source="_AK7RgDJek_SfL2NfB3t-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#F57C00;strokeWidth=3;endArrow=classic;" target="_AK7RgDJek_SfL2NfB3t-52" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-57" edge="1" parent="1" source="_AK7RgDJek_SfL2NfB3t-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#F57C00;strokeWidth=3;endArrow=classic;" target="_AK7RgDJek_SfL2NfB3t-44" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-58" edge="1" parent="1" source="_AK7RgDJek_SfL2NfB3t-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2E7D32;strokeWidth=3;endArrow=classic;" target="_AK7RgDJek_SfL2NfB3t-53" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-59" edge="1" parent="1" source="_AK7RgDJek_SfL2NfB3t-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#2E7D32;strokeWidth=3;endArrow=classic;" target="_AK7RgDJek_SfL2NfB3t-44" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-60" edge="1" parent="1" source="_AK7RgDJek_SfL2NfB3t-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#7B1FA2;strokeWidth=3;endArrow=classic;" target="_AK7RgDJek_SfL2NfB3t-54" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-61" edge="1" parent="1" source="_AK7RgDJek_SfL2NfB3t-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#7B1FA2;strokeWidth=3;endArrow=classic;" target="_AK7RgDJek_SfL2NfB3t-44" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-62" edge="1" parent="1" source="_AK7RgDJek_SfL2NfB3t-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#D32F2F;strokeWidth=3;endArrow=classic;" target="_AK7RgDJek_SfL2NfB3t-55" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-63" edge="1" parent="1" source="_AK7RgDJek_SfL2NfB3t-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#D32F2F;strokeWidth=3;endArrow=classic;" target="_AK7RgDJek_SfL2NfB3t-45" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_AK7RgDJek_SfL2NfB3t-64" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#F9A825;strokeWidth=2;fontSize=18;fontStyle=1;align=center;verticalAlign=middle;" value="Protocols analyzed:  ICMP  ·  ARP  ·  DNS  ·  HTTP  ·  HTTPS/TLS  ·  SSH  ·  SMB2  ·  TCP SYN Scan" vertex="1">
+          <mxGeometry height="55" width="1360" x="205" y="930" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
